@@ -23,3 +23,11 @@ sudo bash fakeAP.sh
 <br>
 
 ![menú](Img/captura1.png)
+
+Luego en las nuevas ventanas ejecutar los siguientes comandos:
+
+```
+hostapd.conf
+
+dnsmasq -C dnsmasq.conf -d
+```
