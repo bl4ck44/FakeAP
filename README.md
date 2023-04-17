@@ -27,7 +27,7 @@ sudo bash fakeAP.sh
 Luego en las nuevas ventanas ejecutar los siguientes comandos:
 
 ```
-hostapd.conf
+hostapd hostapd.conf
 
 dnsmasq -C dnsmasq.conf -d
 ```
