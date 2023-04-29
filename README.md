@@ -15,9 +15,9 @@ git clone https://github.com/bl4ck44/FakeAP.git
 
 cd FakeAP
 
-chmod +x fakeAP.sh
+chmod +x fakeAP.py
 
-sudo bash fakeAP.sh
+sudo python3 fakeAP.py
 ```
 
 <br>
