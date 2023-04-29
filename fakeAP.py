@@ -14,6 +14,13 @@ print("\033[32m                                ╚═╝     ╚═╝  ╚═�
 print("                                                                                                   ")
 print("\033[32m                                           https://github.com/bl4ck44                \033[0m")
 
+
+if os.geteuid() == 0:
+    pass
+else:
+    print("Ejecute este script como root (usando sudo).")
+    os.system("exit")
+
 while True:                                                   
     print("\n\033[1m[1] Instalar requisitos\033[0m")
     print("\033[1m[2] Configurar FakeAP\033[0m")
