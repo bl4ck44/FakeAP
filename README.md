@@ -24,10 +24,4 @@ sudo bash fakeAP.sh
 
 ![menú](Img/captura1.png)
 
-Luego en las nuevas ventanas ejecutar los siguientes comandos:
-
-```
-hostapd hostapd.conf
-
-dnsmasq -C dnsmasq.conf -d
-```
+En el archivo **hostapd.conf** puede configurar el nombre de red que se va a crear y la contraseña, en el archivo **dnsmasq.conf** puede configurar para guardar el tráfico de red en un archivo **.log**
