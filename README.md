@@ -4,7 +4,7 @@
 <img src="Logotipo.png" width="278px">
 </p>
 
-Una Fake AP (Punto de Acceso Falso) es una red inalámbrica fraudulenta que se crea para engañar a los usuarios y hacerles creer que están conectados a una red y segura
+El repositorio "Fake AP" es una herramienta de código abierto diseñada para facilitar la creación de puntos de acceso Wi-Fi falsos, también conocidos como "AP falsos". Un AP falso es una red Wi-Fi simulada que se asemeja a una red legítima, pero que está controlada por un atacante. Esta herramienta puede ser utilizada con fines educativos y de investigación, así como para probar la seguridad de redes Wi-Fi existentes.
 
 Una vez que un usuario se conecta a la Fake AP, el hacker puede interceptar y registrar toda la información transmitida entre el usuario y la red, lo que puede poner en riesgo la privacidad y la seguridad de los datos del usuario.
 
