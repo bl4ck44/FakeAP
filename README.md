@@ -8,6 +8,12 @@ El repositorio "FakeAP" es una herramienta de código abierto diseñada para fac
 
 Una vez que un usuario se conecta a la Fake AP, el hacker puede interceptar y registrar toda la información transmitida entre el usuario y la red, lo que puede poner en riesgo la privacidad y la seguridad de los datos del usuario.
 
+### Requisitos
+
+* Kali Linux o Parrot OS
+
+* Adaptador TL-WN722N
+
 <br>
 
 ```
