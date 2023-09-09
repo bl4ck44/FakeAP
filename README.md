@@ -17,6 +17,10 @@ Una vez que un usuario se conecta a la Fake AP, el hacker puede interceptar y re
 <br>
 
 ```
+iwconfig (Primero verificar que este conectado el adaptador)
+
+pip install pywifi
+
 git clone https://github.com/bl4ck44/FakeAP.git
 
 cd FakeAP
@@ -28,6 +32,8 @@ sudo python3 fakeAP.py
 
 <br>
 
-![menú](Img/captura1.png)
+<p align="center">
+<img src="./Img/captura.png">
+</p>
 
 En el archivo **hostapd.conf** puede configurar el nombre de red que se va a crear y la contraseña, en el archivo **dnsmasq.conf** puede configurar para guardar el tráfico de red en un archivo **.log**
