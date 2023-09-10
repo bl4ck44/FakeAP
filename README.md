@@ -12,7 +12,7 @@ Una vez que un usuario se conecta a la Fake AP, el hacker puede interceptar y re
 
 * Kali Linux o Parrot OS
 
-* Adaptador TL-WN722N
+* Adaptador Wireless compatible con modo monitor
 
 <br>
 
