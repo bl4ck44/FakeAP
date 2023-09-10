@@ -16,6 +16,8 @@ Una vez que un usuario se conecta a la Fake AP, el hacker puede interceptar y re
 
 <br>
 
+En el archivo **hostapd.conf** puede configurar el nombre de red que se va a crear y la contraseña, en el archivo **dnsmasq.conf** puede configurar para guardar el tráfico de red en un archivo **.log**
+
 ```
 iwconfig (Primero verificar que este conectado el adaptador)
 
@@ -35,5 +37,3 @@ sudo python3 fakeAP.py
 <p align="center">
 <img src="./Img/captura.png">
 </p>
-
-En el archivo **hostapd.conf** puede configurar el nombre de red que se va a crear y la contraseña, en el archivo **dnsmasq.conf** puede configurar para guardar el tráfico de red en un archivo **.log**
