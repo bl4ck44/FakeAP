@@ -19,7 +19,7 @@ print("\033[32m                                           https://github.com/bl4
 if os.geteuid() == 0:
     pass
 else:
-    print("[+] Ejecute este script como root (usando sudo).")
+    print("[+] Ejecute este script como root (usando sudo).\n")
     os.system("exit")
 
 
