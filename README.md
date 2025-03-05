@@ -21,7 +21,7 @@ En el archivo **hostapd.conf** puede configurar el nombre de red que se va a cre
 ```
 iwconfig (Primero verificar que este conectado el adaptador)
 
-pip install pywifi --break-system-packages
+sudo pip install pywifi --break-system-packages
 
 git clone https://github.com/bl4ck44/FakeAP.git
 
